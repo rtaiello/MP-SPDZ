@@ -75,6 +75,8 @@ gen_input: gen_input_f2n.x gen_input_fp.x
 
 externalIO: bankers-bonus-client.x
 
+tensor-externalIO: tensor-bankers-bonus-client.x
+
 bmr: bmr-program-party.x bmr-program-tparty.x
 
 real-bmr: $(patsubst Machines/%.cpp,%.x,$(wildcard Machines/*-bmr-party.cpp))
@@ -160,6 +162,9 @@ bmr-clean:
 	-rm BMR/*.o BMR/*/*.o GC/*.o
 
 bankers-bonus-client.x: ExternalIO/bankers-bonus-client.cpp $(COMMON)
+	$(CXX) $(CFLAGS) -o $@ $^ $(LDLIBS)
+
+tensor-bankers-bonus-client.x: TensorExternalIO/bankers-bonus-client.cpp $(COMMON)
 	$(CXX) $(CFLAGS) -o $@ $^ $(LDLIBS)
 
 simple-offline.x: $(FHEOFFLINE)

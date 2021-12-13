@@ -1,5 +1,4 @@
 # sint: secret integers
-
 # you can assign public numbers to sint
 
 a = sint(1)
@@ -97,6 +96,7 @@ print_ln('Party 0: please input three numbers not adding up to zero')
 print_ln('Party 1: please input any three numbers')
 
 data = Matrix(3, 2, sfix)
+
 
 # use @for_range_opt for balanced optimization
 # but use Python loops if compile-time numbers are need (e.g., for players)

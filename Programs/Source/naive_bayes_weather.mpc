@@ -1,0 +1,13 @@
+n_samples = 14
+n_features = 4
+
+labels = sint.Array(n_samples)
+features = sint.Matrix(n_samples, n_features)
+
+labels.input_from(0)
+features.input_from(0)
+
+print_ln('labels are: %s', labels.reveal())
+print_ln('features are')
+features.print_reveal_nested()
+

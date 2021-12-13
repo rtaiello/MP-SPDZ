@@ -1,0 +1,15 @@
+
+vector_1 = sint.Matrix(200,200)
+vector_2 = sint.Matrix(200,200)
+
+#vector_1 = sint.input_tensor_from(0, shape=(1,1))
+#vector_2 = sint.input_tensor_from(1, shape=(1,1))
+
+result = vector_1 + vector_2
+#result.print_reveal_nested()
+
+result = vector_1.mul(vector_2)
+#result.print_reveal_nested()
+#print_ln('vector 1: %s', vector_1.reveal())
+
+#print_ln('vector 2: %s', vector_2.reveal())

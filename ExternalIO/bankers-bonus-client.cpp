@@ -50,7 +50,7 @@ template<class T>
 void one_run(T salary_value, Client& client)
 {
     // Run the computation
-    client.send_private_inputs<T>({salary_value});
+    client.send_private_inputs<T>({salary_value, salary_value});
     cout << "Sent private inputs to each SPDZ engine, waiting for result..." << endl;
 
     // Get the result back (client_id of winning client)
